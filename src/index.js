@@ -13,7 +13,7 @@ searchField.addEventListener('input', debounce(createMarkup, DEBOUNCE_DELAY));
 
 function createMarkup(evt) {
   resetMarkup();
-  if (evt.target.value.trim() === '') {
+  if (!evt.target.value.trim()) {
     return 
   };
   fetchCountries(evt.target.value).then(chooseMarkupType)

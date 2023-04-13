@@ -110,7 +110,7 @@ li p {
 
 label{
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
 }
@@ -129,6 +129,12 @@ label{
 
 
 .header:hover {
+  color: rgb(208, 239, 245);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#search-box:focus+.header {
   color: rgb(208, 239, 245);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   cursor: pointer;
