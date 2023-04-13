@@ -4,7 +4,7 @@ const searchParams = new URLSearchParams({
 });
 
 export default function fetchCountries(name) {
-  return fetch(`https://restcountries.com/v3.1/name/${name}?${searchParams}`)
+  return fetch(`https://restcountries.com/v3.1/name/${name.trim()}?${searchParams}`)
     .then(response => {
       if (response.status === 404) {
         throw new Error()
